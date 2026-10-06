@@ -1,0 +1,631 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --black: #090909;
+  --white: #f5f4ef;
+  --muted: #b9b8b3;
+  --yellow: #f3c800;
+  --line: #373737;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--black);
+  color: var(--white);
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.45;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+main {
+  max-width: 1600px;
+  margin: auto;
+  background: #080808;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+  min-height: 760px;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid var(--line);
+  background:
+    radial-gradient(
+      circle at 55% 55%,
+      rgba(0, 0, 0, 0.05),
+      rgba(0, 0, 0, 0.9) 62%
+    ),
+    #0a0a0a;
+}
+
+.hero-copy {
+  position: relative;
+  z-index: 3;
+  width: 49%;
+  padding: 34px 36px 50px;
+}
+
+/* Navigation */
+
+.nav {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 25px;
+  font-size: 10px;
+  letter-spacing: 0.08em;
+}
+
+.brand {
+  font-weight: 900;
+  line-height: 0.9;
+  font-size: 13px;
+}
+
+.brand span {
+  font-family: "Arial Narrow", Arial, sans-serif;
+  font-size: 17px;
+}
+
+.nav nav {
+  display: flex;
+  gap: 25px;
+  padding-top: 2px;
+}
+
+.nav nav a,
+.connect {
+  opacity: 0.85;
+}
+
+.connect {
+  white-space: nowrap;
+}
+
+.connect i {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: white;
+  vertical-align: -3px;
+  margin-left: 5px;
+}
+
+/* Hero Title */
+
+.hero-title {
+  margin-top: 95px;
+}
+
+.brands {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 32px;
+  margin-bottom: 32px;
+}
+
+.brands img {
+  width: 200px;
+  height: 90px;
+  display: block;
+}
+
+.brands b {
+  font-family: Arial, sans-serif;
+  font-weight: 400;
+}
+
+.corona {
+  font-family: Georgia, serif;
+  font-weight: 700;
+}
+
+.braam,
+.living,
+.section-number {
+  color: var(--yellow);
+  font-family: "Comic Sans MS", "Bradley Hand", cursive;
+}
+
+.braam {
+  font-size: 31px;
+}
+
+h1,
+h2 {
+  margin: 0;
+  font-family: "Arial Narrow", Impact, Arial, sans-serif;
+  letter-spacing: -0.04em;
+}
+
+h1 {
+  font-size: 94px;
+  line-height: 0.78;
+  font-weight: 900;
+}
+
+.eyebrow {
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  margin: 36px 0 24px;
+  font-weight: 700;
+}
+
+.meta {
+  display: flex;
+  gap: 42px;
+  border-top: 1px solid #555;
+  padding-top: 18px;
+  max-width: 620px;
+}
+
+.meta div {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.meta small {
+  font-size: 9px;
+  letter-spacing: 0.13em;
+  font-weight: 700;
+}
+
+.meta strong {
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.living {
+  font-size: 30px;
+  line-height: 0.75;
+  margin-top: 40px;
+}
+
+.living span {
+  font-size: 31px;
+}
+
+/* Hero Image */
+
+.hero-image {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 57%;
+  height: 100%;
+}
+
+.hero-image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      90deg,
+      #090909 0%,
+      rgba(9, 9, 9, 0.25) 28%,
+      transparent 58%
+    ),
+    linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.4),
+      transparent 45%
+    );
+}
+
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.hero-note {
+  position: absolute;
+  right: 42px;
+  bottom: 42px;
+  z-index: 4;
+  font-family: "Comic Sans MS", "Bradley Hand", cursive;
+  font-size: 17px;
+  line-height: 1;
+}
+
+/* =========================
+   SPLIT SECTIONS
+========================= */
+
+.split {
+  display: grid;
+  grid-template-columns: 34% 66%;
+  min-height: 420px;
+  border-bottom: 1px solid var(--line);
+}
+
+.text-panel {
+  padding: 55px 38px 48px;
+  background: linear-gradient(120deg, #0c0c0c, #111);
+}
+
+.section-number {
+  font-family: Arial, sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+h2 {
+  font-family: "Comic Sans MS", "Bradley Hand", cursive;
+  font-size: 43px;
+  line-height: 0.93;
+  margin: 24px 0 28px;
+}
+
+.text-panel > p:not(.section-number) {
+  font-size: 15px;
+  color: #ddd;
+  max-width: 410px;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin-top: 26px;
+}
+
+.tags span {
+  border: 1px solid #888;
+  border-radius: 30px;
+  padding: 6px 10px;
+  font-size: 8px;
+  letter-spacing: 0.08em;
+}
+
+.wide-image {
+  margin: 0;
+  position: relative;
+  overflow: hidden;
+  background: #111;
+}
+
+.wide-image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.wide-image figcaption {
+  position: absolute;
+  right: 24px;
+  bottom: 25px;
+  font-family: "Comic Sans MS", "Bradley Hand", cursive;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 1.05;
+}
+
+.idea .wide-image img {
+  object-position: center;
+}
+
+/* =========================
+   GALLERY
+========================= */
+
+.gallery {
+  display: grid;
+  grid-template-columns: 1.25fr 0.95fr 0.95fr;
+  gap: 1px;
+  background: #050505;
+  border-bottom: 1px solid var(--line);
+}
+
+.gallery figure {
+  height: 370px;
+  margin: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.gallery img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.gallery figure:nth-child(2) img {
+  object-position: center;
+}
+
+.gallery .small figcaption {
+  position: absolute;
+  right: 20px;
+  bottom: 24px;
+  font-family: "Comic Sans MS", "Bradley Hand", cursive;
+  font-size: 16px;
+  line-height: 1.05;
+  text-align: right;
+}
+
+/* =========================
+   IMPACT
+========================= */
+
+.impact {
+  padding: 50px 38px 35px;
+  display: grid;
+  grid-template-columns: 42% 58%;
+  border-bottom: 1px solid var(--line);
+  background:
+    radial-gradient(
+      circle at 80% 40%,
+      rgba(35, 60, 30, 0.18),
+      transparent 35%
+    ),
+    #0a0a0a;
+}
+
+.impact-copy {
+  padding-right: 45px;
+}
+
+.impact-copy h2 {
+  margin-top: 18px;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-left: 1px solid #555;
+}
+
+.stats div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  gap: 8px;
+}
+
+.stats span {
+  font-size: 32px;
+}
+
+.stats span img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+
+.stats b {
+  font-size: 11px;
+  letter-spacing: 0.05em;
+}
+
+.stats small {
+  font-size: 10px;
+  color: #aaa;
+}
+
+.living-bottom {
+  grid-column: 2;
+  color: var(--yellow);
+  font-family: "Comic Sans MS", "Bradley Hand", cursive;
+  font-size: 27px;
+  margin-top: 16px;
+  text-align: center;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+  min-height: 72px;
+  padding: 24px 38px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 10px;
+  letter-spacing: 0.07em;
+}
+
+footer span {
+  color: #aaa;
+}
+
+footer a {
+  font-weight: 700;
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px) {
+  .hero {
+    min-height: 820px;
+  }
+
+  .hero-copy {
+    width: 100%;
+    padding: 24px;
+  }
+
+  .hero-image {
+    width: 100%;
+    height: 62%;
+    top: 38%;
+  }
+
+  .hero-image::after {
+    background:
+      linear-gradient(
+        180deg,
+        #090909 0%,
+        rgba(9, 9, 9, 0.05) 35%,
+        rgba(9, 9, 9, 0.2)
+      );
+  }
+
+  .hero-title {
+    margin-top: 65px;
+  }
+
+  h1 {
+    font-size: 72px;
+  }
+
+  .nav nav {
+    display: none;
+  }
+
+  .connect {
+    margin-left: auto;
+  }
+
+  .split {
+    grid-template-columns: 1fr;
+  }
+
+  .text-panel {
+    padding: 40px 24px;
+  }
+
+  .wide-image {
+    min-height: 360px;
+  }
+
+  .gallery {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .gallery figure {
+    height: 300px;
+  }
+
+  .gallery figure:first-child {
+    grid-column: 1 / -1;
+  }
+
+  .impact {
+    grid-template-columns: 1fr;
+    padding: 40px 24px;
+  }
+
+  .impact-copy {
+    padding-right: 0;
+  }
+
+  .stats {
+    border-left: 0;
+    margin-top: 25px;
+    min-height: 160px;
+  }
+
+  .living-bottom {
+    grid-column: 1;
+  }
+
+  footer {
+    padding: 22px 24px;
+    gap: 15px;
+    flex-wrap: wrap;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 560px) {
+  .hero {
+    min-height: 700px;
+  }
+
+  .hero-title {
+    margin-top: 45px;
+  }
+
+  .brands {
+    font-size: 24px;
+    gap: 10px;
+    margin-bottom: 24px;
+  }
+
+  .brands img {
+    height: 30px;
+  }
+
+  .braam {
+    font-size: 23px;
+  }
+
+  h1 {
+    font-size: 58px;
+  }
+
+  .eyebrow {
+    font-size: 8px;
+    letter-spacing: 0.13em;
+  }
+
+  .meta {
+    gap: 18px;
+    flex-wrap: wrap;
+  }
+
+  .hero-image {
+    height: 55%;
+    top: 45%;
+  }
+
+  .hero-note {
+    right: 20px;
+    bottom: 20px;
+    font-size: 13px;
+  }
+
+  h2 {
+    font-size: 34px;
+  }
+
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery figure:first-child {
+    grid-column: auto;
+  }
+
+  .gallery figure {
+    height: 300px;
+  }
+
+  .stats b {
+    font-size: 9px;
+  }
+
+  footer {
+    font-size: 8px;
+  }
+}
