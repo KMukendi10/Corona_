@@ -33,6 +33,12 @@ main {
   background: #080808;
 }
 
+/* Gap between every top-level section */
+main > section,
+main > footer {
+  margin-bottom: 10px;
+}
+
 /* =========================
    HERO
 ========================= */
@@ -55,7 +61,7 @@ main {
   position: relative;
   z-index: 3;
   width: 49%;
-  padding: 34px 36px 50px;
+  padding: 0 36px 50px;
 }
 
 /* Navigation */
@@ -67,6 +73,9 @@ main {
   gap: 25px;
   font-size: 10px;
   letter-spacing: 0.08em;
+  position: relative;
+  z-index: 10;
+  padding: 34px 36px 0;
 }
 
 .brand {
@@ -120,8 +129,8 @@ main {
 }
 
 .brands img {
-  width: 200px;
-  height: 90px;
+  width: 120px;
+  height: auto;
   display: block;
 }
 
@@ -139,7 +148,7 @@ main {
 .living,
 .section-number {
   color: var(--yellow);
-  font-family: "Comic Sans MS", "Bradley Hand", cursive;
+  font-family: "Permanent Marker", cursive;
 }
 
 .braam {
@@ -241,7 +250,7 @@ h1 {
   right: 42px;
   bottom: 42px;
   z-index: 4;
-  font-family: "Comic Sans MS", "Bradley Hand", cursive;
+  font-family: "Permanent Marker", cursive;
   font-size: 17px;
   line-height: 1;
 }
@@ -252,9 +261,13 @@ h1 {
 
 .split {
   display: grid;
-  grid-template-columns: 34% 66%;
-  min-height: 420px;
+  grid-template-columns: 30% 70%;
   border-bottom: 1px solid var(--line);
+}
+
+/* Section 02 (idea) has a slightly wider text panel */
+.split.idea {
+  grid-template-columns: 38% 62%;
 }
 
 .text-panel {
@@ -270,7 +283,7 @@ h1 {
 }
 
 h2 {
-  font-family: "Comic Sans MS", "Bradley Hand", cursive;
+  font-family: "Permanent Marker", cursive;
   font-size: 43px;
   line-height: 0.93;
   margin: 24px 0 28px;
@@ -300,29 +313,25 @@ h2 {
 .wide-image {
   margin: 0;
   position: relative;
-  overflow: hidden;
   background: #111;
 }
 
 .wide-image img {
   width: 100%;
-  height: 100%;
+  height: auto;
   display: block;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .wide-image figcaption {
   position: absolute;
   right: 24px;
   bottom: 25px;
-  font-family: "Comic Sans MS", "Bradley Hand", cursive;
+  font-family: "Permanent Marker", cursive;
   font-weight: 700;
   font-size: 17px;
   line-height: 1.05;
-}
-
-.idea .wide-image img {
-  object-position: center;
+  color: black;
 }
 
 /* =========================
@@ -331,24 +340,23 @@ h2 {
 
 .gallery {
   display: grid;
-  grid-template-columns: 1.25fr 0.95fr 0.95fr;
+  grid-template-columns: 2fr 1fr 1fr;
   gap: 1px;
   background: #050505;
   border-bottom: 1px solid var(--line);
+  align-items: start;
 }
 
 .gallery figure {
-  height: 370px;
   margin: 0;
   position: relative;
-  overflow: hidden;
 }
 
 .gallery img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto;
   display: block;
+  object-fit: contain;
 }
 
 .gallery figure:nth-child(2) img {
@@ -359,10 +367,11 @@ h2 {
   position: absolute;
   right: 20px;
   bottom: 24px;
-  font-family: "Comic Sans MS", "Bradley Hand", cursive;
+  font-family: "Permanent Marker", cursive;
   font-size: 16px;
   line-height: 1.05;
   text-align: right;
+  color: var(--white);
 }
 
 /* =========================
@@ -392,8 +401,9 @@ h2 {
 }
 
 .stats {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  justify-content: space-between;
+  padding: 50px;
   border-left: 1px solid #555;
 }
 
@@ -403,7 +413,7 @@ h2 {
   justify-content: center;
   flex-direction: column;
   text-align: center;
-  gap: 8px;
+  gap: 7px;
 }
 
 .stats span {
@@ -429,10 +439,10 @@ h2 {
 .living-bottom {
   grid-column: 2;
   color: var(--yellow);
-  font-family: "Comic Sans MS", "Bradley Hand", cursive;
+  font-family: "Permanent Marker", cursive;
   font-size: 27px;
   margin-top: 16px;
-  text-align: center;
+  padding-left: 50px;
 }
 
 /* =========================
@@ -507,12 +517,16 @@ footer a {
     grid-template-columns: 1fr;
   }
 
+  .split.idea {
+    grid-template-columns: 1fr;
+  }
+
   .text-panel {
     padding: 40px 24px;
   }
 
   .wide-image {
-    min-height: 360px;
+    min-height: unset;
   }
 
   .gallery {
@@ -520,7 +534,7 @@ footer a {
   }
 
   .gallery figure {
-    height: 300px;
+    height: auto;
   }
 
   .gallery figure:first-child {
@@ -618,7 +632,7 @@ footer a {
   }
 
   .gallery figure {
-    height: 300px;
+    height: auto;
   }
 
   .stats b {
