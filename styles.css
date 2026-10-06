@@ -158,8 +158,8 @@ main > footer {
 h1,
 h2 {
   margin: 0;
-  font-family: "Arial Narrow", Impact, Arial, sans-serif;
-  letter-spacing: -0.04em;
+  font-family: "Bebas Neue", "Arial Narrow", Impact, Arial, sans-serif;
+  letter-spacing: 0.02em;
 }
 
 h1 {
