@@ -7,7 +7,7 @@
   --white: #f5f4ef;
   --muted: #b9b8b3;
   --yellow: #f3c800;
-  --line: #373737;
+  --line: #191919;
 }
 
 html {
@@ -159,12 +159,12 @@ h1,
 h2 {
   margin: 0;
   font-family: "Bebas Neue", "Arial Narrow", Impact, Arial, sans-serif;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.05em;
 }
 
 h1 {
   font-size: 94px;
-  line-height: 0.78;
+  line-height: 0.9;
   font-weight: 900;
 }
 
@@ -177,7 +177,7 @@ h1 {
 
 .meta {
   display: flex;
-  gap: 42px;
+  gap: 80px;
   border-top: 1px solid #555;
   padding-top: 18px;
   max-width: 620px;
@@ -186,7 +186,7 @@ h1 {
 .meta div {
   display: flex;
   flex-direction: column;
-  gap: 3px;
+  gap: 6px;
 }
 
 .meta small {
